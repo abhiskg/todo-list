@@ -8,7 +8,7 @@ const TodoApp = () => {
   const [todos, setTodos] = useState<TodoDataType[] | []>([]);
 
   return (
-    <div className="grid place-items-center">
+    <div className=" custom-width mx-auto mt-10 flex flex-col items-center justify-center rounded ">
       <h1 className="mt-4">Todo App</h1>
       <TodoForm
         todoText={todoText}
@@ -19,14 +19,16 @@ const TodoApp = () => {
 
       {todos &&
         todos.length > 0 &&
-        todos.map((todo) => (
-          <TodoListCard
-            key={todo.id}
-            todo={todo}
-            todos={todos}
-            setTodos={setTodos}
-          />
-        ))}
+        todos
+          .sort((x, y) => Number(x.completed) - Number(y.completed))
+          .map((todo) => (
+            <TodoListCard
+              key={todo.id}
+              todo={todo}
+              todos={todos}
+              setTodos={setTodos}
+            />
+          ))}
     </div>
   );
 };
