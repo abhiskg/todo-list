@@ -1,5 +1,11 @@
+import TodoApp from "./pages/TodoApp";
+
 function App() {
-  return <div className="text-center">Todo App</div>;
+  return (
+    <div>
+      <TodoApp />
+    </div>
+  );
 }
 
 export default App;
