@@ -2,7 +2,7 @@ import TodoApp from "./pages/TodoApp";
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen w-full bg-[#010313]">
       <TodoApp />
     </div>
   );

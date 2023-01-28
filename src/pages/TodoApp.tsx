@@ -8,8 +8,8 @@ const TodoApp = () => {
   const [todos, setTodos] = useState<TodoDataType[] | []>([]);
 
   return (
-    <div className=" custom-width mx-auto mt-10 flex flex-col items-center justify-center rounded ">
-      <h1 className="mt-4">Todo App</h1>
+    <div className=" custom-width mx-auto flex flex-col items-center justify-center rounded ">
+      <h1 className="mt-10 mb-5 text-4xl font-bold text-[#D3ABFF]">Todo App</h1>
       <TodoForm
         todoText={todoText}
         setTodoText={setTodoText}
